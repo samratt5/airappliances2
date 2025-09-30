@@ -44,6 +44,22 @@
   background: #f9f9f9;
   text-align: center;
 }
+
+
+/* Subtle Zoom Animation */
+@keyframes slightZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-slight-zoom {
+  animation: slightZoom 2s ease-in-out infinite;
+}
+
+
+
+    
 .brand-grid-section h2 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -356,5 +372,13 @@
       <a href="tel:8250791200" class="cta-button text-sm py-2 px-4">Call Now</a>
     </nav>
   </div>
+    <!-- Floating Buttons with Subtle Zoom -->
+<a href="tel:8250791200" class="fixed left-4 bottom-8 z-50 animate-slight-zoom" title="Call Us Now">
+    <img src="/images/call.png" alt="Call Us" class="h-16 w-16">
+</a>
+
+<a href="https://wa.me/918250791200" class="fixed right-4 bottom-8 z-50 animate-slight-zoom" target="_blank" title="WhatsApp Us Now">
+    <img src="/images/whatsapp.png" alt="WhatsApp Us" class="h-16 w-16">
+</a>
 </header>
 
