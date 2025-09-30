@@ -326,20 +326,18 @@
   color: #FFA500; /* orange for active */
 }
 </style>
-<header id="top" class="sticky top-0 bg-indigo-header text-white shadow-lg z-50">
+<header id="top" class="fixed w-full top-0 left-0 bg-indigo-header text-white z-50 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
     <!-- Logo -->
     <a href="https://airappliances.in/refrigerator-repair-in-kolkata" class="inline-block">
       <img src="/images/logo222.webp" alt="Airappliances Kolkata Logo" class="h-12 sm:h-16">
     </a>
     
-    <!-- Navigation Links (Desktop) -->
+    <!-- Desktop Navigation -->
     <nav class="hidden md:flex space-x-8 nav-links text-base font-semibold relative">
       <!-- Services Dropdown -->
       <div class="group relative">
-        <a href="#" class="nav-link flex items-center">
-          Services <span class="ml-1">▼</span>
-        </a>
+        <a href="#" class="nav-link flex items-center">Services <span class="ml-1">▼</span></a>
         <div class="absolute hidden group-hover:block bg-white text-indigo-header shadow-lg rounded-lg mt-0 w-56 z-50 pt-2">
           <a href="https://airappliances.in/ac-repair-in-kolkata" class="block px-4 py-2 hover:bg-gray-100">AC Repair</a>
           <a href="https://airappliances.in/microwave-oven-repair-in-kolkata" class="block px-4 py-2 hover:bg-gray-100">Microwave Repair</a>
@@ -354,26 +352,26 @@
     </nav>
 
     <!-- Hamburger Menu (Mobile) -->
-    <button class="hamburger md:hidden" aria-label="Toggle mobile menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="hamburger md:hidden flex flex-col justify-between w-6 h-6" aria-label="Toggle mobile menu">
+      <span class="block h-0.5 w-full bg-white"></span>
+      <span class="block h-0.5 w-full bg-white"></span>
+      <span class="block h-0.5 w-full bg-white"></span>
     </button>
-    
+
     <!-- Mobile Menu -->
-    <nav class="mobile-menu hidden">
-      <a href="https://airappliances.in/ac-repair-in-kolkata">AC Repair</a>
-      <a href="https://airappliances.in/microwave-oven-repair-in-kolkata">Microwave Repair</a>
-      <a href="https://airappliances.in/refrigerator-repair-in-kolkata">Refrigerator Repair</a>
-      <a href="https://airappliances.in/washing-machine-repair-in-kolkata.html">Washing Machine Repair</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="contact.html" class="nav-link">Contact Us</a>
-      <a href="#faqs">FAQs</a>
+    <nav class="mobile-menu hidden flex-col mt-2 md:hidden space-y-2 bg-indigo-header p-4 rounded-lg">
+      <a href="https://airappliances.in/ac-repair-in-kolkata" class="block text-white">AC Repair</a>
+      <a href="https://airappliances.in/microwave-oven-repair-in-kolkata" class="block text-white">Microwave Repair</a>
+      <a href="https://airappliances.in/refrigerator-repair-in-kolkata" class="block text-white">Refrigerator Repair</a>
+      <a href="https://airappliances.in/washing-machine-repair-in-kolkata.html" class="block text-white">Washing Machine Repair</a>
+      <a href="#testimonials" class="block text-white">Reviews</a>
+      <a href="contact.html" class="block text-white">Contact Us</a>
+      <a href="#faqs" class="block text-white">FAQs</a>
       <a href="tel:8250791200" class="cta-button text-sm py-2 px-4">Call Now</a>
     </nav>
   </div>
 
-  <!-- Floating Buttons with Subtle Zoom -->
+  <!-- Floating Buttons -->
   <a href="tel:8250791200" class="fixed left-4 bottom-8 z-50 animate-slight-zoom" title="Call Us Now">
       <img src="/images/call.png" alt="Call Us" class="h-16 w-16">
   </a>
@@ -381,5 +379,34 @@
   <a href="https://wa.me/918250791200" class="fixed right-4 bottom-8 z-50 animate-slight-zoom" target="_blank" title="WhatsApp Us Now">
       <img src="/images/whatsapp.png" alt="WhatsApp Us" class="h-16 w-16">
   </a>
+
+  <style>
+    /* Subtle Zoom for Floating Buttons */
+    @keyframes slightZoom {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .animate-slight-zoom { animation: slightZoom 2s ease-in-out infinite; }
+  </style>
+
+  <script>
+    // Add shadow on scroll
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('top');
+      if(window.scrollY > 10){
+        header.classList.add('shadow-xl');
+      } else {
+        header.classList.remove('shadow-xl');
+      }
+    });
+
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </header>
 
