@@ -14,31 +14,33 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         z-index: 1000;
     }
-    /* Header Navigation Link Hover Effect */
-    .nav-link {
-        position: relative;
-        padding-bottom: 5px;
-        color: white;
-        transition: color 0.3s ease;
-    }
-    
-    .nav-link:hover {
-        color: #0000FF;
-    }
-    .nav-link:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 0;
-        height: 3px;
-        background-color: #FF0000;
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-    }
-    .nav-link:hover:after {
-        width: 100%;
-    }
+     /* Desktop links hover color */
+  .nav-link:hover {
+    background-color: #ff7f50; /* Orange hover */
+    color: white;
+    border-radius: 6px;
+  }
+
+  /* Desktop active menu (highlight current page) */
+  .nav-link.active {
+    background-color: #ff4500; /* Darker orange for active */
+    color: white;
+    border-radius: 6px;
+  }
+
+  /* Dropdown links hover */
+  .dropdown-link:hover {
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 4px;
+  }
+
+  /* Mobile menu links hover */
+  .mobile-link:hover {
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 4px;
+  }
     
     .brand-grid-section {
   padding: 40px 20px;
