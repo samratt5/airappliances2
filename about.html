@@ -263,15 +263,28 @@
                 </p>
                 <div class="bg-white p-8 rounded-xl shadow-2xl card">
                     <form id="ctaForm" onsubmit="handleFormSubmit(event, 'CTA')">
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <input type="text" id="cta_name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg">
-                            <input type="tel" id="cta_phone" placeholder="10-Digit Phone" required pattern="[0-9]{10}" title="Must be a 10-digit number" class="w-full p-3 border border-gray-300 rounded-lg">
-                        </div>
-                        <input type="text" id="cta_location" placeholder="Your Area (e.g., Salt Lake, Tollygunge)" required class="w-full p-3 mb-6 border border-gray-300 rounded-lg">
-                        <textarea id="cta_message" placeholder="Describe the Issue (e.g., Samsung AC, not cooling)" required rows="4" class="w-full p-3 mb-6 border border-gray-300 rounded-lg"></textarea>
-                        <button type="submit" class="cta-button w-full text-xl hover:bg-orange-600">Book Now</button>
-                        <p id="ctaMessage" class="mt-4 text-center text-sm font-semibold text-green-600 hidden">Success! We'll call you back in 15 minutes.</p>
-                    </form>
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <input type="text" id="cta_name" placeholder="Your Name" required 
+               class="w-full p-3 border border-gray-300 rounded-lg text-black placeholder-gray-500">
+        
+        <input type="tel" id="cta_phone" placeholder="10-Digit Phone" required 
+               pattern="[0-9]{10}" title="Must be a 10-digit number" 
+               class="w-full p-3 border border-gray-300 rounded-lg text-black placeholder-gray-500">
+    </div>
+
+    <input type="text" id="cta_location" placeholder="Your Area (e.g., Salt Lake, Tollygunge)" required 
+           class="w-full p-3 mb-6 border border-gray-300 rounded-lg text-black placeholder-gray-500">
+    
+    <textarea id="cta_message" placeholder="Describe the Issue (e.g., Samsung AC, not cooling)" required rows="4" 
+              class="w-full p-3 mb-6 border border-gray-300 rounded-lg text-black placeholder-gray-500"></textarea>
+    
+    <button type="submit" class="cta-button w-full text-xl hover:bg-orange-600">Book Now</button>
+    
+    <p id="ctaMessage" class="mt-4 text-center text-sm font-semibold text-green-600 hidden">
+        Success! We'll call you back in 15 minutes.
+    </p>
+</form>
+
                 </div>
             </div>
         </section>
