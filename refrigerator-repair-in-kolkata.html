@@ -919,16 +919,25 @@
                 </p>
                 <div class="bg-white p-8 rounded-xl shadow-2xl">
                     <form id="contactForm" onsubmit="handleFormSubmit(event, 'Contact')">
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <input type="text" id="c_name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg">
-                            <input type="tel" id="c_phone" placeholder="10-Digit Phone" required pattern="[0-9]{10}" title="Must be a 10-digit number" class="w-full p-3 border border-gray-300 rounded-lg">
-                        </div>
-                        <input type="email" id="c_email" placeholder="Your Email (Optional)" class="w-full p-3 mb-6 border border-gray-300 rounded-lg">
-                        <input type="text" id="c_location" placeholder="Your Exact Location (e.g., Ballygunge)" required class="w-full p-3 mb-6 border border-gray-300 rounded-lg">
-                        <textarea id="c_message" placeholder="Describe the issue (e.g., Whirlpool Double Door, making loud noise)" required rows="4" class="w-full p-3 mb-6 border border-gray-300 rounded-lg"></textarea>
-                        <button type="submit" class="cta-button w-full text-xl hover:bg-orange-600">Request Same-Day Service</button>
-                        <p id="contactMessage" class="mt-4 text-center text-sm font-semibold text-green-600 hidden">Success! We'll call you back in less than 15 minutes.</p>
-                    </form>
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <input type="text" id="c_name" placeholder="Your Name" required 
+               class="w-full p-3 border border-gray-300 rounded-lg text-black">
+        <input type="tel" id="c_phone" placeholder="10-Digit Phone" required pattern="[0-9]{10}" title="Must be a 10-digit number" 
+               class="w-full p-3 border border-gray-300 rounded-lg text-black">
+    </div>
+    <input type="email" id="c_email" placeholder="Your Email (Optional)" 
+           class="w-full p-3 mb-6 border border-gray-300 rounded-lg text-black">
+    <input type="text" id="c_location" placeholder="Your Exact Location (e.g., Ballygunge)" required 
+           class="w-full p-3 mb-6 border border-gray-300 rounded-lg text-black">
+    <textarea id="c_message" placeholder="Describe the issue (e.g., Whirlpool Double Door, making loud noise)" required rows="4" 
+              class="w-full p-3 mb-6 border border-gray-300 rounded-lg text-black"></textarea>
+    <button type="submit" class="cta-button w-full text-xl text-white bg-orange-500 hover:bg-orange-600 rounded-lg">
+        Request Same-Day Service
+    </button>
+    <p id="contactMessage" class="mt-4 text-center text-sm font-semibold text-green-600 hidden">
+        Success! We'll call you back in less than 15 minutes.
+    </p>
+</form>
                     <div class="mt-8 pt-6 border-t border-gray-200">
                         <h3 class="text-xl font-heading font-bold mb-4 text-indigo-header">Or Contact Us Directly</h3>
                         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-indigo-header font-semibold">
