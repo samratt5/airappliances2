@@ -17,6 +17,347 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        background-color: #0080ff;
+        line-height: 1.6;
+    }
+    h1, h2, h3, h4 {
+        font-family: 'Montserrat', sans-serif;
+        color: #1A237E;
+    }
+    /* Sticky Header */
+    header {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    
+    
+    .brand-grid-section {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+
+/* Subtle Zoom Animation */
+@keyframes slightZoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.animate-slight-zoom {
+  animation: slightZoom 2s ease-in-out infinite;
+}
+
+
+
+    
+.brand-grid-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.brand-grid-section p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.brand-item {
+  background: #666565;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.brand-item:hover {
+  transform: scale(1.05);
+}
+.brand-logo {
+  max-width: 100px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .brand-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .brand-logo {
+    max-width: 80px;
+  }
+}
+    
+    .certifications-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 30px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.cert-badges {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.cert-badges img {
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.cert-badges img:hover {
+  transform: scale(1.05);
+}
+.cert-details {
+  list-style-type: none;
+  padding: 0;
+}
+.cert-details li {
+  padding: 10px;
+  margin: 10px 0;
+  background: white;
+  border-left: 4px solid #007bff;
+  border-radius: 5px;
+  font-weight: 500;
+}
+    
+    /* Call-to-Action Button Styling */
+  .cta-button {
+    background-color: #FF5722;
+    color: #fff;
+    padding: 0.4rem 0.9rem;   /* compact padding */
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    display: inline-block;   /* makes button hug text */
+    width: auto;             /* prevents full width */
+    max-width: fit-content;  /* keeps it as small as text */
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+    .cta-button:hover {
+    background-color: white;     /* invert on hover */
+    color: #FF5722;
+    border-color: #FF5722;
+    transform: translateY(-2px); /* subtle lift */
+}
+    /* Card Styling */
+    .card {
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        padding: 1.5rem;
+        border-top: 5px solid #202126;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    /* Floating Buttons Zoom Animation */
+    @keyframes zoomInOut {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        animation: zoomInOut 4s infinite ease-in-out;
+        z-index: 1000;
+        transition: all 0.3s;
+    }
+    .whatsapp-float:hover {
+        background-color: #1EBE55;
+        animation: none;
+        transform: scale(1.1);
+    }
+    .call-float {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        background-color: #FF5722;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(255, 87, 34, 0.4);
+        animation: zoomInOut 4s infinite ease-in-out;
+        z-index: 1000;
+        transition: all 0.3s;
+    }
+    .call-float:hover {
+        background-color: #E64A19;
+        animation: none;
+        transform: scale(1.1);
+    }
+    /* Testimonial Fade-in Animation */
+    .testimonial-item {
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+        animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    /* Review Aggregator Styling */
+    .review-aggregator {
+        background-color: #E8F5E9;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-weight: bold;
+        color: #242427;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    /* Accordion Styling */
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+    .accordion-content.open {
+        max-height: 500px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    /* Hamburger Menu Styling */
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #353537;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-menu.active {
+        transform: translateX(0);
+    }
+    .mobile-menu a {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 1rem 0;
+        text-decoration: none;
+    }
+    .mobile-menu a:hover {
+        color: #FF5722;
+    }
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        h1 { font-size: 2.25rem; }
+        h2 { font-size: 1.75rem; }
+        .hero-content { padding-top: 4rem; padding-bottom: 4rem; }
+        .nav-links { display: none; }
+        .hamburger { display: flex; }
+    }
+    @media (min-width: 768px) {
+        .hero-content { padding-top: 8rem; padding-bottom: 8rem; }
+        .mobile-menu { display: none; }
+    }
+    /* Active Menu Highlight */
+.nav-link.active,
+.mobile-menu a.active {
+  color: #FFA500; /* orange for active */
+}
+
+
+     /* Desktop links hover color */
+  .nav-link:hover {
+    background-color: #ff7f50; /* Orange hover */
+    color: white;
+    border-radius: 6px;
+  }
+
+  /* Desktop active menu (highlight current page) */
+  .nav-link.active {
+    background-color: #ff4500; /* Darker orange for active */
+    color: white;
+    border-radius: 6px;
+  }
+
+  /* Dropdown links hover */
+  .dropdown-link:hover {
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 4px;
+  }
+
+  /* Mobile menu links hover */
+  .mobile-link:hover {
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 4px;
+  }
+    
+</style>
+
+    
+
    <!-- ✅ JSON-LD Structured Data for Airappliances Kolkata -->
 <script type="application/ld+json">
 {
