@@ -1,0 +1,25 @@
+<script>
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get('service') || '';
+    const type = params.get('type') || '';
+    const name = params.get('name') || '';
+    const phone = params.get('phone') || '';
+    const city = params.get('city') || '';
+
+    if(service && type && name && phone && city) {
+        const whatsappNumber = "918250791200";
+        const message = encodeURIComponent(
+            `New Service Booking:\nService: ${service}\nType: ${type}\nName: ${name}\nPhone: ${phone}\nLocation: ${city}`
+        );
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`; // use wa.me link
+
+        // Use a small timeout to ensure redirect happens
+        setTimeout(() => {
+            window.location.replace(whatsappURL);
+        }, 100);
+    } else {
+        document.body.innerHTML = "<p>Missing form data. Please go back and submit the form properly.</p>";
+    }
+})();
+</script>
