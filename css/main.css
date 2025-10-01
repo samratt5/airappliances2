@@ -8,6 +8,40 @@
 
 
 
+
+.img-right {
+    float: none;
+    margin: 0 0 1rem 0;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .img-right {
+      float: right;
+      margin: 0 0 1rem 1rem;
+      max-width: 45%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -3134,5 +3168,6 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
   }
 }
+
 
 
