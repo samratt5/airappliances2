@@ -28,7 +28,19 @@
 
 
 
-
+#appliance-resources {
+  width: 100vw !important;
+  margin-left: calc(50% - 50vw); /* breaks out of parent container */
+  background-color: #000000;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: left;
+}
+#appliance-resources > div {
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
 
 
 
@@ -3168,6 +3180,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
   }
 }
+
 
 
 
