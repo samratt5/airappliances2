@@ -1,43 +1,4 @@
-<script type="text/javascript">
-        var gk_isXlsx = false;
-        var gk_xlsxFileLookup = {};
-        var gk_fileData = {};
-        function filledCell(cell) {
-          return cell !== '' && cell != null;
-        }
-        function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
-                }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
-            }
-        }
-        return gk_fileData[filename] || "";
-        }
-        </script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,13 +10,13 @@
     <link rel="canonical" href="https://airappliances.in/ac-service-kolkata">
     <meta property="og:title" content="AC Service in Kolkata | Airappliances Kolkata">
     <meta property="og:description" content="Fast and affordable AC service in Kolkata. Call 8250791200 or book online for same-day air conditioner repairs in Garia, Behala, Salt Lake, and more!">
-    <meta property="og:image" content="https://via.placeholder.com/800x400?text=AC+Service+Kolkata">
+    <meta property="og:image" content="https://airappliances.in/images/ac-repair-kolkata.webp">
     <meta property="og:url" content="https://airappliances.in/ac-service-kolkata">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AC Service in Kolkata | Airappliances Kolkata">
     <meta name="twitter:description" content="Quick air conditioner service in Kolkata. Call 8250791200 or book online for same-day repairs!">
-    <meta name="twitter:image" content="https://via.placeholder.com/800x400?text=AC+Service+Kolkata">
+    <meta name="twitter:image" content="https://airappliances.in/images/ac-repair-kolkata.webp">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -64,7 +25,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Airappliances Kolkata",
-      "image": "https://via.placeholder.com/800x400?text=AC+Service+Kolkata",
+      "image": "https://airappliances.in/images/ac-repair-kolkata.webp",
       "url": "https://airappliances.in/ac-service-kolkata",
       "sameAs": ["https://www.justdial.com/Kolkata/Airappliances-Service-Centre-Near-Gorabazar-Dum-Dum/033PXX33-XX33-240307135613-B1J1_BZDET"],
       "telephone": "+918250791200",
@@ -320,7 +281,7 @@
         }
 
         .hero {
-            background: url("/images/ac-service-kolkata.webp") no-repeat center center/cover;
+            background: url("images/ac-repair-kolkata.webp") no-repeat center center/cover;
             color: white;
             padding: 80px 0;
             position: relative;
@@ -1064,19 +1025,19 @@
                 <p>At our <strong>AC service center in Kolkata</strong>, we handle all your AC needs with expertise and care.</p>
                 <div class="service-grid">
                     <div class="service-card">
-                        <img src="/images/ac-repair.webp" alt="AC Repair">
+                        <img src="/images/ac1.webp" alt="AC Repair">
                         <h3>AC Repair</h3>
                         <p>Fix cooling issues, noisy units, or water leaks with our expert <strong>AC service in Kolkata</strong>.</p>
                         <p><span class="old-price">₹799</span> <span class="price">₹599</span></p>
                     </div>
                     <div class="service-card">
-                        <img src="/images/ac-gas-refilling.webp" alt="AC Gas Refilling">
+                        <img src="/images/ac2.webp" alt="AC Gas Refilling">
                         <h3>AC Gas Refilling</h3>
                         <p>Restore your AC’s cooling efficiency with professional gas refilling services.</p>
                         <p><span class="old-price">₹2499</span> <span class="price">₹1999</span></p>
                     </div>
                     <div class="service-card">
-                        <img src="/images/ac-maintenance.webp" alt="AC Maintenance">
+                        <img src="/images/ac3.webp" alt="AC Maintenance">
                         <h3>AC Maintenance</h3>
                         <p>Keep your AC running smoothly with routine maintenance from our <strong>AC service center in Kolkata</strong>.</p>
                         <p><span class="old-price">₹599</span> <span class="price">₹499</span></p>
@@ -1120,7 +1081,12 @@
                     </div>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://via.placeholder.com/800x400?text=Map+Dumdum+Nager+Bazar"></iframe>
+<iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.4338950666016!2d88.40763267597523!3d22.60410077864197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM3JzE4LjAiTiA4OMKwMjQnMzYuNyJF!5e0!3m2!1sZW4!2sin!4v1690000000000"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Airappliances Kolkata Service Area Map"></iframe>
                 </div>
                 <p class="mt-4"><strong>Address</strong>: Dumdum Nager Bazar, Kolkata, West Bengal - 700074</p>
             </div>
