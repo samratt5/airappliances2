@@ -237,6 +237,27 @@
                 background: var(--primary-blue);
             }
 
+
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  table {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+
+
+
+        
+
             .hamburger {
                 display: none;
                 cursor: pointer;
@@ -1163,7 +1184,7 @@
             <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
                 <li><a class="dropdown-item" href="/ac-repair-in-kolkata">AC Repair</a></li>
                 <li><a class="dropdown-item" href="/microwave-repair-in-kolkata">Microwave Repair</a></li>
-                <li><a class="dropdown-item" href="/fridge-repair-in-kolkata">Refrigerator Repair</a></li>
+                <li><a class="dropdown-item" href="/refrigerator-repair-in-kolkata">Refrigerator Repair</a></li>
                 <li><a class="dropdown-item" href="/washing-machine-repair-in-kolkata">Washing Machine Repair</a></li>
             </ul>
         </li>
@@ -1254,7 +1275,7 @@ Location: Kolkata`;
                         </div>
                     </article>
                     <article class="service-card">
-                        <img src="/images/fridge-repair-kolkata.webp" alt="Refrigerator Repair in Kolkata">
+                        <img src="/images/Refrigerator-repair-kolkata.webp" alt="Refrigerator Repair in Kolkata">
                         <div class="p-3">
                             <h3>Refrigerator Repair</h3>
                             <p>Fix <strong>fridge repair in Kolkata</strong> for cooling issues or compressor faults. Quick service for Samsung and Whirlpool.</p>
@@ -1336,91 +1357,110 @@ Location: Kolkata`;
                 </ul>
             </div>
         </section>
-        <section id="brand-comparison" class="container py-5">
-            <h2 class="text-center">Compare Appliance Repair Costs in Kolkata</h2>
-            <p class="text-center mx-auto" style="max-width: 800px;">See common issues and costs for top brands like LG, Samsung, and Whirlpool for the best <strong>home appliance repairing service Kolkata</strong>.</p>
-            <table class="brand-comparison-table table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Appliance</th>
-                        <th>Brand</th>
-                        <th>Common Issues</th>
-                        <th>Repair Cost</th>
-                        <th>Service Time</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Washing Machine</td>
-                        <td>LG</td>
-                        <td>Not spinning, PCB issues</td>
-                        <td><span class="text-muted text-decoration-line-through">₹800</span> ₹640</td>
-                        <td>1-2 Hours</td>
-                    </tr>
-                    <tr>
-                        <td>Refrigerator</td>
-                        <td>Samsung</td>
-                        <td>Not cooling, compressor fault</td>
-                        <td><span class="text-muted text-decoration-line-through">₹1000</span> ₹800</td>
-                        <td>2-3 Hours</td>
-                    </tr>
-                    <tr>
-                        <td>AC</td>
-                        <td>Whirlpool</td>
-                        <td>Not cooling, gas leak</td>
-                        <td><span class="text-muted text-decoration-line-through">₹1200</span> ₹960</td>
-                        <td>2-3 Hours</td>
-                    </tr>
-                    <tr>
-                        <td>Microwave</td>
-                        <td>IFB</td>
-                        <td>Not heating, turntable issue</td>
-                        <td><span class="text-muted text-decoration-line-through">₹700</span> ₹560</td>
-                        <td>1-2 Hours</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section id="pricing" class="container py-5">
-            <h2 class="text-center">Home Appliance Repair Prices in Kolkata</h2>
-            <p class="text-center bg-warning p-2 rounded">Save 20% on service charge for online bookings today!</p>
-            <table class="pricing-table table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Service</th>
-                        <th>Price</th>
-                        <th>Warranty</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Inspection (Any Appliance)</td>
-                        <td>₹149 (Free with repair)</td>
-                        <td>-</td>
-                    </tr>
-                    <tr>
-                        <td>Washing Machine Repair</td>
-                        <td>₹399 onwards</td>
-                        <td>30-90 Days</td>
-                    </tr>
-                    <tr>
-                        <td>Refrigerator Repair</td>
-                        <td>₹499 onwards</td>
-                        <td>30-90 Days</td>
-                    </tr>
-                    <tr>
-                        <td>AC Repair/Gas Filling</td>
-                        <td>₹699 onwards</td>
-                        <td>30-90 Days</td>
-                    </tr>
-                    <tr>
-                        <td>Microwave Repair</td>
-                        <td>₹499 onwards</td>
-                        <td>30-90 Days</td>
-                    </tr>
-                </tbody>
-            </table>
-       </section>
+        <section id="brand-comparison" class="container py-4 py-md-5">
+  <h2 class="text-center mb-3">Compare Appliance Repair Costs in Kolkata</h2>
+  <p class="text-center mx-auto mb-4" style="max-width: 800px;">
+    See common issues and costs for top brands like LG, Samsung, and Whirlpool for the best 
+    <strong>home appliance repairing service Kolkata</strong>.
+  </p>
+  
+  <div class="table-responsive">
+    <table class="brand-comparison-table table table-bordered table-striped align-middle text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Appliance</th>
+          <th>Brand</th>
+          <th>Common Issues</th>
+          <th>Repair Cost</th>
+          <th>Service Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Washing Machine</td>
+          <td>LG</td>
+          <td>Not spinning, PCB issues</td>
+          <td><span class="text-muted text-decoration-line-through">₹800</span> ₹640</td>
+          <td>1-2 Hours</td>
+        </tr>
+        <tr>
+          <td>Refrigerator</td>
+          <td>Samsung</td>
+          <td>Not cooling, compressor fault</td>
+          <td><span class="text-muted text-decoration-line-through">₹1000</span> ₹800</td>
+          <td>2-3 Hours</td>
+        </tr>
+        <tr>
+          <td>AC</td>
+          <td>Whirlpool</td>
+          <td>Not cooling, gas leak</td>
+          <td><span class="text-muted text-decoration-line-through">₹1200</span> ₹960</td>
+          <td>2-3 Hours</td>
+        </tr>
+        <tr>
+          <td>Microwave</td>
+          <td>IFB</td>
+          <td>Not heating, turntable issue</td>
+          <td><span class="text-muted text-decoration-line-through">₹700</span> ₹560</td>
+          <td>1-2 Hours</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="pricing" class="container py-4 py-md-5">
+  <h2 class="text-center mb-3">Home Appliance Repair Prices in Kolkata</h2>
+  <p class="text-center bg-warning p-2 rounded mb-4">
+    Save 20% on service charge for online bookings today!
+  </p>
+
+  <div class="table-responsive">
+    <table class="pricing-table table table-bordered table-striped align-middle text-center">
+      <thead class="table-light">
+        <tr>
+          <th>Service</th>
+          <th>Price</th>
+          <th>Warranty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Inspection (Any Appliance)</td>
+          <td>₹149 (Free with repair)</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Washing Machine Repair</td>
+          <td>₹399 onwards</td>
+          <td>30-90 Days</td>
+        </tr>
+        <tr>
+          <td>Refrigerator Repair</td>
+          <td>₹499 onwards</td>
+          <td>30-90 Days</td>
+        </tr>
+        <tr>
+          <td>AC Repair/Gas Filling</td>
+          <td>₹699 onwards</td>
+          <td>30-90 Days</td>
+        </tr>
+        <tr>
+          <td>Microwave Repair</td>
+          <td>₹499 onwards</td>
+          <td>30-90 Days</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+
+
+
+
+        
 <section id="testimonials" class="bg-white py-5">
     <div class="container text-center">
         <h2>Customer Reviews for Home Appliance Repair</h2>
