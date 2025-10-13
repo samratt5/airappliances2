@@ -147,6 +147,65 @@
                 font-size: 20px;
             }
         }
+
+
+  /* --- Floating CTA Styles --- */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            z-index: 1050; /* Above modal backdrop (1040) */
+            border: 3px solid #f8f9fa; /* Light border */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+            padding: 0 !important; /* Remove padding to let image fill */
+        }
+        .call-btn {
+            left: 20px;
+            background-color: transparent !important; /* Image will provide color */
+        }
+        .whatsapp-btn {
+            right: 20px;
+            background-color: transparent !important; /* Image will provide color */
+        }
+        .floating-cta img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 9999px; /* Make sure image is also circular */
+        }
+
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Adjust button position for smaller screens */
+        @media (max-width: 576px) {
+            .floating-cta {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                bottom: 15px;
+            }
+            .call-btn {
+                left: 15px;
+            }
+            .whatsapp-btn {
+                right: 15px;
+            }
+        }
+
+
+
+
+
+
+        
     </style>
 </head>
 <body>
@@ -159,20 +218,7 @@
                 <!-- LOGO PLACEHOLDER -->
             </a>
             
-           <!-- Floating CTA Buttons (Bottom Left and Right) -->
     
-    <!-- Floating Call Button (Bottom Left) -->
-    <a href="tel:+918250791200" class="floating-cta call-btn p-0 rounded-circle d-flex align-items-center justify-content-center" title="Call for Emergency Repair">
-        <!-- CALL PLACEHOLDER IMAGE -->
-        <img src="/images/call.png" alt="Call Icon" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/60x60/dc3545/ffffff?text=CALL';">
-    </a>
-
-    <!-- Floating WhatsApp Button (Bottom Right) - Triggers Modal -->
-    <button type="button" class="floating-cta whatsapp-btn p-0 rounded-circle d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#whatsappBookingModal" title="Book via WhatsApp">
-        <!-- WHATSAPP PLACEHOLDER IMAGE -->
-        <img src="/images/whatsapp.png" alt="WhatsApp Icon" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/60x60/25d366/ffffff?text=WA';">
-    </button>
-    <!-- End Floating CTA Buttons -->
 
             <!-- Offcanvas Toggle (Mobile) -->
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -232,9 +278,20 @@
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/918250791200?text=Hi%20Airappliances,%20I%20need%20fridge%20repair%20in%20Kolkata" class="floating-btn">
-        <i class="fab fa-whatsapp"></i>
+     <!-- Floating CTA Buttons (Bottom Left and Right) -->
+    
+    <!-- Floating Call Button (Bottom Left) -->
+    <a href="tel:+918250791200" class="floating-cta call-btn p-0 rounded-circle d-flex align-items-center justify-content-center" title="Call for Emergency Repair">
+        <!-- CALL PLACEHOLDER IMAGE -->
+        <img src="/images/call.png" alt="Call Icon" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/60x60/dc3545/ffffff?text=CALL';">
     </a>
+
+    <!-- Floating WhatsApp Button (Bottom Right) - Triggers Modal -->
+    <button type="button" class="floating-cta whatsapp-btn p-0 rounded-circle d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#whatsappBookingModal" title="Book via WhatsApp">
+        <!-- WHATSAPP PLACEHOLDER IMAGE -->
+        <img src="/images/whatsapp.png" alt="WhatsApp Icon" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/60x60/25d366/ffffff?text=WA';">
+    </button>
+    <!-- End Floating CTA Buttons -->
 
     <!-- Footer -->
     <footer>
