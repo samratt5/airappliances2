@@ -157,13 +157,22 @@
             <!-- Logo Placeholder / Title -->
             <a class="navbar-brand h3 fw-bold text-primary m-0" href="#">
                 <!-- LOGO PLACEHOLDER -->
-                <img src="/images/logo222.png" alt="Air Appliances Logo" style="height: 40px; width: auto;" class="rounded me-2 d-inline-block align-text-top" onerror="this.onerror=null;this.src='https://placehold.co/100x40/0d6efd/ffffff?text=Logo';" loading="lazy">
             </a>
             
-            <!-- Desktop CTA (Hidden on mobile) -->
-            <a href="tel:+918250791200" class="btn btn-sm btn-danger fw-semibold d-none d-lg-inline-block">
-                Call Now: +91 82507 91200
-            </a>
+           <!-- Floating CTA Buttons (Bottom Left and Right) -->
+    
+    <!-- Floating Call Button (Bottom Left) -->
+    <a href="tel:+918250791200" class="floating-cta call-btn p-0 rounded-circle d-flex align-items-center justify-content-center" title="Call for Emergency Repair">
+        <!-- CALL PLACEHOLDER IMAGE -->
+        <img src="/images/call.png" alt="Call Icon" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/60x60/dc3545/ffffff?text=CALL';">
+    </a>
+
+    <!-- Floating WhatsApp Button (Bottom Right) - Triggers Modal -->
+    <button type="button" class="floating-cta whatsapp-btn p-0 rounded-circle d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#whatsappBookingModal" title="Book via WhatsApp">
+        <!-- WHATSAPP PLACEHOLDER IMAGE -->
+        <img src="/images/whatsapp.png" alt="WhatsApp Icon" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/60x60/25d366/ffffff?text=WA';">
+    </button>
+    <!-- End Floating CTA Buttons -->
 
             <!-- Offcanvas Toggle (Mobile) -->
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
