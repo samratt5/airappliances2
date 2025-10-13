@@ -150,6 +150,61 @@
     </style>
 </head>
 <body>
+
+<!-- Header Section (Sticky Navbar with Offcanvas Menu) -->
+    <header class="navbar navbar-expand-lg navbar-light bg-white shadow fixed-top z-3">
+        <div class="container px-4">
+            <!-- Logo Placeholder / Title -->
+            <a class="navbar-brand h3 fw-bold text-primary m-0" href="#">
+                <!-- LOGO PLACEHOLDER -->
+                <img src="/images/logo222.png" alt="Air Appliances Logo" style="height: 40px; width: auto;" class="rounded me-2 d-inline-block align-text-top" onerror="this.onerror=null;this.src='https://placehold.co/100x40/0d6efd/ffffff?text=Logo';" loading="lazy">
+            </a>
+            
+            <!-- Desktop CTA (Hidden on mobile) -->
+            <a href="tel:+918250791200" class="btn btn-sm btn-danger fw-semibold d-none d-lg-inline-block">
+                Call Now: +91 82507 91200
+            </a>
+
+            <!-- Offcanvas Toggle (Mobile) -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Offcanvas Menu Content -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header border-bottom">
+                    <h5 class="offcanvas-title fw-bold text-primary" id="offcanvasNavbarLabel">Habra AC Experts Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!-- Navigation Links -->
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark" href="#why-us" data-bs-dismiss="offcanvas">Why Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark" href="#services" data-bs-dismiss="offcanvas">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark" href="#reviews" data-bs-dismiss="offcanvas">Reviews</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold text-dark" href="#faq" data-bs-dismiss="offcanvas">FAQ</a>
+                        </li>
+                        <!-- Mobile CTA -->
+                        <li class="nav-item mt-4 d-lg-none">
+                            <a href="tel:+918250791200" class="btn btn-danger w-100 fw-bold py-2">Call Now: 8250791200</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+
+
+    
     <!-- Error Content -->
     <div class="error-container">
         <img src="/images/logo222.png" alt="404 Error - Fridge Repair Page Not Found in Kolkata" class="error-image">
